@@ -1,0 +1,488 @@
+/* FUENTES DE LETRA FUTURA */
+@font-face {
+    font-family: 'Futura Condensed';
+    src: url('fonts/futura-condensed-black-bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura Italic Bold';
+    src: url('fonts/Futura\ Bold\ Italic\ font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura Book';
+    src: url('fonts/Futura\ Book\ font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura Italic';
+    src: url('fonts/Futura\ Book\ Italic\ font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura Heavy';
+    src: url('fonts/Futura\ Heavy\ font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura Light';
+    src: url('fonts/futura\ light\ bt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura Medium';
+    src: url('fonts/futura\ medium\ bt.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Futura Book', sans-serif;
+    scroll-behavior: smooth;
+    color: black;
+}
+
+html,
+body {
+    min-height: 100vh;
+}
+
+/* NAVEGADOR */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    padding: 10px;
+    padding-top: 10px;
+    box-sizing: border-box;
+
+
+    height: 8.6vh;
+    width: 100%;
+    background-color: white;
+
+
+    /* border: 1px solid black; */
+    color: black;
+}
+
+li.menu-container {
+    z-index: 999;
+}
+
+div.logotipo-navegador {
+    width: 156vh;
+    margin: auto;
+}
+
+#barra-menu,
+div.logotipo-navegador img {
+    height: 50px;
+
+}
+
+/* OPCIONES DEL NAVEGADOR */
+div.menu {
+    visibility: hidden;
+    opacity: 0;
+    /* position:absolute; */
+    position: relative;
+    top: -3px;
+    /* top: 69px;
+    left: 26px; */
+    padding-left: 26px;
+    /* PARA ENSEÑARLE A KILLIAN QUE TAL ESTA OPCION */
+    max-height: 30px;
+    width: 100%;
+
+    background-color: lightblue;
+
+    transition: all 1s ease-in-out;
+    /* overflow: hidden; */
+}
+
+.menu .opciones {
+    /* flex-direction: column; */
+    flex-direction: row;
+    /* PARA ENSEÑARLE A KILLIAN QUE TAL ESTA OPCION */
+    justify-content: center;
+    /* border: 1px solid black; */
+    /* background-color: #0368AA; */
+    /* border-radius: 0px 10px 10px 10px; */
+    min-width: 160px;
+    height: 30px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+    z-index: 1;
+}
+
+.menu .opciones .opcion {
+    /* padding: 12px 16px; */
+    text-decoration: none;
+    display: block;
+}
+
+
+li.opcion {
+    padding: 0;
+    width: 200px;
+    /* max-height: 10px; */
+    height: 20px;
+
+    box-shadow: 0px 3px 6px black;
+    margin-left: 10px;
+
+
+    /* border: 0.25px solid black; */
+    background-color: #0368AA;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+ul.opciones li:first-child {
+    border-radius: 0px 10px 0px 0px;
+}
+
+ul.opciones li:last-child {
+    border-radius: 0px 0px 10px 10px;
+}
+
+/* HOVER MENU */
+
+nav:hover div.menu {
+    visibility: visible;
+    opacity: 1;
+    top: 0px;
+    /* max-height: 400px; */
+}
+
+.opcion:hover {
+    background-color: #ddd;
+    color: black;
+    box-shadow: inset 2px 2px 7px black;
+}
+
+
+li.opcion:hover {
+    /* AZUL --> BLANCO LETRA AZUL
+        BLANCO --> NEGRO LETRA BLANCA
+        AMARILLO --> NEGRO SOBRE AMARILLO (por confirmar) */
+}
+
+
+/* FORMATO IMAGENES, ENLACES, LISTAS Y CONTENEDOR */
+img {
+    height: auto;
+}
+
+a {
+    display: flex;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+}
+
+li {
+    justify-content: center;
+    text-align: center;
+    padding-left: 15px;
+    /* margin: 10px; */
+}
+
+/* CONTENEDORES */
+.contenedor {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    margin-bottom: 1px;
+    padding-top: 11vh;
+
+    height: 100vh;
+    background-color: white;
+
+    border-bottom: 2px solid lightgrey;
+
+}
+
+/* PRIMERA PAGINA */
+#video {
+    padding-top: 30px;
+    width: 100%;
+    height: 670px;
+}
+
+/* SEGUNDA PÁGINA */
+#pag2 {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.logo img,
+div.descripcion {
+    margin-top: 10px;
+    /* margin-left: 100px; */
+}
+
+.logo img {
+    margin-left: 10px;
+    height: 600px;
+    /* border: 3px solid black; */
+}
+
+div.descripcion {
+    width: 900px;
+    height: 600px;
+    font-size: 20px;
+    word-spacing: 10px;
+    text-align: left;
+    box-sizing: border-box;
+    word-spacing: 1px;
+    padding: 10px 0px 0px 30px;
+}
+
+div.descripcion p {
+    margin-bottom: 5px;
+    margin-top: 366px;
+    font-size: 19px;
+}
+
+/* TERCERA PAGINA */
+#pag3 {
+    padding-top: 16vh;
+    height: 100vh;
+
+}
+
+#pag3 table:first-child {
+    margin-top: 40px;
+}
+
+table {
+    margin-top: 10px;
+    margin-left: 10px;
+    /* border-spacing: 100px 0px; */
+}
+
+table,
+td,
+tr {
+    text-align: center;
+    /* border: 2px solid black; */
+
+}
+
+td,
+tr {
+    border-collapse: collapse;
+}
+
+td {
+    width: 500px;
+}
+
+td h1 {
+    font-size: 22px;
+}
+
+/* PARTE DE LOS FOLLETOS*/
+
+/* ICONOS */
+img.iconos {
+    position: absolute;
+    top: -60px;
+    left: 200px;
+    height: 80px;
+}
+
+div.visualizacion {
+    display: grid;
+    position: relative;
+}
+
+div.folleto {
+    margin: auto;
+    margin-top: 30px;
+    background-color: green;
+    width: 250px;
+    height: 500px;
+    box-shadow: 2px 2px 10px black;
+
+    grid-area: 1 / 1 / -1 / -1;
+
+    /* border: 2px solid black; */
+
+
+}
+
+div.principal {
+    z-index: 5;
+}
+
+div.moviendo-principal-derecha {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    width: 250px;
+    height: 400px;
+    z-index: 7;
+
+
+    transition: transform 3s ease;
+    transform: translate(-78px, -2.5px) scale(1, 1.24);
+}
+
+div.moviendo-principal-izquierda {
+    position: absolute;
+    left: 8%;
+    top: 10%;
+    width: 250px;
+    height: 400px;
+    z-index: 7;
+
+
+    transition: transform 3s ease;
+    transform: translate(78px, 2.9px) scale(1, 1.24);
+}
+
+div.izquierda,
+div.derecha {
+    position: absolute;
+
+    width: 250px;
+    height: 400px;
+
+    z-index: 1;
+}
+
+div.derecha {
+    left: 40%;
+    top: 10%;
+    /* transform: translate(200px, 50px); */
+
+}
+
+div.moviendo-derecha {
+    transition: transform 1s ease;
+    transform: translate(101px, 5px) scale(0.805);
+}
+
+div.moviendo-izquierda {
+    transition: transform 1s ease;
+    transform: translate(-101px, 5px) scale(0.805);
+}
+
+div.izquierda {
+    left: 8%;
+    top: 10%;
+    /* transform: translate(30px, 50px); */
+
+}
+
+
+/* HOVER DE LOS FOLLETOS */
+div.folleto.hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Para que el hover y el click no hagan de las suyas */
+.disable-hover {
+    pointer-events: none;
+}
+
+/* PAGINA CUATRO */
+
+td.td-informacion {
+    width: 500px;
+    height: 300px;
+    box-sizing: border-box;
+    text-align: left;
+    vertical-align: top;
+}
+
+p.informacion-consejos {
+    text-align: left;
+    padding: 10px 40px 0px 30px;
+    font-size: 18px;
+}
+
+td.consejos {
+    text-align: center;
+}
+
+div.ovalo {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 420px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 30px 30px 30px 30px;
+}
+
+
+
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: left;
+    /* align-items: center; */
+    flex-direction: row;
+    height: 45vh;
+    background-color: #0368AA;
+}
+
+#segundo-numero {
+    padding-left: 42.5px;
+}
+
+
+
+section.apartados-footer {
+    height: 300px;
+    width: 450px;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+section.apartados-footer:first-child {
+    width: 550px;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+section.apartados-footer:last-child {
+    width: 150px;
+    margin-left: 65px;
+    margin-top: 11px;
+}
+
+section.apartados-footer p {
+    margin-top: 10px;
+    color: white;
+}
+
+div.contactanos {
+    margin-left: 40px;
+}
+
+section.apartados-footer p img {
+    height: 120px;
+}
