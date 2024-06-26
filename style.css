@@ -34,455 +34,1041 @@
     src: url('fonts/futura\ medium\ bt.ttf') format('truetype');
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Futura Book', sans-serif;
-    scroll-behavior: smooth;
-    color: black;
+
+/* FORMATO PARA TELEFONO */
+@media (max-width: 768px) {
+
+    /* Ajustes específicos para pantallas con un ancho máximo de 768px */
+
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Futura Book', sans-serif;
+        font-size: 10px;
+        scroll-behavior: smooth;
+        color: black;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        font-family: 'Futura Book', sans-serif;
+        scroll-behavior: smooth;
+        color: black;
+        box-sizing: border-box;
+    }
+
+    /* NAVEGADOR */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        position: fixed;
+        padding-top: 10px;
+        box-sizing: border-box;
+
+        width: 100%;
+        height: 8.6vh;
+        background-color: white;
+
+        z-index: 999;
+        color: black;
+    }
+
+    li.menu-container {
+        padding: 0;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    li.logotipo-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    div.logotipo-navegador {
+        width: 100%;
+        margin: auto;
+    }
+
+    #barra-menu,
+    div.logotipo-navegador img {
+        height: 40px;
+    }
+
+    #barra-menu img {
+        display: none;
+    }
+
+    /* OPCIONES DEL NAVEGADOR */
+    div.menu {
+        display: none;
+        opacity: 0;
+        /* position:absolute; */
+        position: relative;
+        top: -3px;
+        /* top: 69px;
+        left: 26px; */
+        padding-left: 26px;
+        /* PARA ENSEÑARLE A KILLIAN QUE TAL ESTA OPCION */
+        max-height: 30px;
+        width: 100%;
+
+        transition: all 1s ease-in-out;
+        /* overflow: hidden; */
+    }
+
+    .menu .opciones {
+        /* flex-direction: column; */
+        flex-direction: row;
+        /* PARA ENSEÑARLE A KILLIAN QUE TAL ESTA OPCION */
+        justify-content: center;
+        /* border: 1px solid black; */
+        /* background-color: #0368AA; */
+        /* border-radius: 0px 10px 10px 10px; */
+        min-width: 160px;
+        height: 30px;
+        /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+        z-index: 1;
+    }
+
+    .menu .opciones .opcion {
+        /* padding: 12px 16px; */
+        text-decoration: none;
+        display: block;
+    }
+
+
+    li.opcion {
+        padding: 0;
+        width: 200px;
+        /* max-height: 10px; */
+        height: 20px;
+
+        box-shadow: 0px 3px 6px black;
+        margin-left: 10px;
+
+
+        /* border: 0.25px solid black; */
+        background-color: #0368AA;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    ul.opciones li:first-child {
+        border-radius: 0px 10px 0px 0px;
+    }
+
+    ul.opciones li:last-child {
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    /* HOVER MENU */
+
+    nav:hover {
+        cursor: pointer;
+    }
+
+    nav:hover div.menu {
+        visibility: visible;
+        opacity: 1;
+        top: 0px;
+        /* max-height: 400px; */
+    }
+
+    .opcion:hover {
+        background-color: #ddd;
+        color: black;
+        box-shadow: inset 2px 2px 7px black;
+    }
+
+
+    li.opcion:hover {
+        /* AZUL --> BLANCO LETRA AZUL
+            BLANCO --> NEGRO LETRA BLANCA
+            AMARILLO --> NEGRO SOBRE AMARILLO (por confirmar) */
+    }
+
+
+    /* FORMATO IMAGENES, ENLACES, LISTAS Y CONTENEDOR */
+    a {
+        display: flex;
+        text-decoration: none;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+    }
+
+    li {
+        justify-content: center;
+        text-align: center;
+        padding-left: 15px;
+        /* margin: 10px; */
+    }
+
+    /* CONTENEDORES */
+    .contenedor {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+
+        margin-bottom: 20px;
+        padding-top: 0;
+
+        width: 100%;
+        height: 50vh;
+        background-color: white;
+
+        /* border-bottom: 2px solid lightgrey; */
+
+    }
+
+    /* PRIMERA PAGINA */
+    #video {
+        padding-top: 30px;
+        width: 100%;
+        height: 620px;
+    }
+
+    /* SEGUNDA PÁGINA */
+    #pag2 {
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+
+
+    }
+
+    .logo,
+    div.descripcion {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        width: 100%;
+        /* margin-left: 100px; */
+    }
+
+    .logo img {
+        margin: auto;
+        height: 400px;
+    }
+
+    div.descripcion {
+        text-align: center;
+        box-sizing: border-box;
+        word-spacing: 1px;
+        padding: 3px 0px 0px 10px;
+
+        box-sizing: border-box;
+    }
+
+    div.descripcion p {
+        margin-bottom: 5px;
+        margin-top: 0px;
+        font-size: 15px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    /* TERCERA PAGINA */
+    #pag3 {
+        position: relative;
+        height: 220vh;
+    }
+
+    #pag3 table:first-child {
+        margin-top: 0;
+    }
+
+    table {
+        margin-top: 10px;
+        width: 100%;
+        /* border-spacing: 100px 0px; */
+    }
+
+    table,
+    td,
+    tr {
+        text-align: center;
+        border: 2px solid white;
+
+    }
+
+    td,
+    tr {
+        display: block;
+        width: 100%;
+        border-collapse: collapse;
+        box-sizing: border-box;
+    }
+
+    #pag3 td,
+    #pag3 tr {
+        margin-bottom: 110px;
+
+    }
+
+    td.titulos {
+        width: 100%;
+        margin-bottom: 300px;
+    }
+
+
+    td h1 {
+        font-size: 20px;
+    }
+
+    #pag3 table:last-child {
+        /* display: none; */
+        position: absolute;
+        top: 430px;
+    }
+
+    #pag3 table:last-child td {
+        margin-bottom: 675px;
+    }
+
+    /* PARTE DE LOS FOLLETOS*/
+
+    /* ICONOS */
+    div.iconos-div {
+        width: 100%;
+    }
+
+    img.iconos {
+        position: relative;
+        margin: auto;
+        top: -580px;
+        /* top: -12px;
+        left: 47px; */
+        height: 150px;
+        z-index: 80;
+    }
+
+    div.visualizacion {
+        display: grid;
+        position: relative;
+    }
+
+    div.folleto {
+        margin: auto;
+        margin-top: 10px;
+        background-color: green;
+        width: calc(300px * 3508 / 4961);
+        /* Mantiene la proporción de A3 */
+        height: calc(300px * 4961 / 3508);
+        box-shadow: 2px 2px 10px black;
+
+        grid-area: 1 / 1 / -1 / -1;
+
+        /* border: 2px solid black; */
+
+
+    }
+
+    div.principal {
+        z-index: 5;
+        /* background-color: red; */
+    }
+
+    div.moviendo-principal-derecha {
+        position: relative;
+        left: 20%;
+        top: 10%;
+        width: calc(300px * 3508 / 4961);
+        /* Mantiene la proporción de A3 */
+        height: calc(250px * 4961 / 3508);
+        z-index: 7;
+
+
+        transition: transform 2s ease;
+        transform: translate(-38%, -3%) scaleY(1.2);
+    }
+
+    div.moviendo-principal-izquierda {
+        position: relative;
+        left: -20%;
+        top: 10%;
+        width: calc(300px * 3508 / 4961);
+        /* Mantiene la proporción de A3 */
+        height: calc(250px * 4961 / 3508);
+        z-index: 7;
+
+        background-color: yellow;
+
+        transition: transform 2s ease, color 2s ease;
+        transform: translate(38%, -2.5%) scaleY(1.2);
+    }
+
+    div.izquierda,
+    div.derecha {
+        position: absolute;
+
+        width: calc(300px * 3508 / 4961);
+        /* Mantiene la proporción de A3 */
+        height: calc(250px * 4961 / 3508);
+
+        z-index: 1;
+    }
+
+    div.derecha {
+        left: 47%;
+        top: 10%;
+        /* transform: translate(200px, 50px); */
+
+    }
+
+    div.moviendo-derecha {
+        transition: transform 1s ease;
+        /* background-color: orange; */
+        transform: translate(44.5%, 2%) scaleY(0.83);
+    }
+
+    div.moviendo-izquierda {
+        transition: transform 1s ease;
+        transform: translate(-44.5%, 2%) scaleY(0.83);
+    }
+
+    div.izquierda {
+        left: 0%;
+        top: 10%;
+        /* transform: translate(30px, 50px); */
+
+    }
+
+
+    /* HOVER DE LOS FOLLETOS */
+    div.folleto.hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    /* Para que el hover y el click no hagan de las suyas */
+    .disable-hover {
+        pointer-events: none;
+    }
+
+    /* PAGINA CUATRO */
+
+    #pag4 {
+        position: relative;
+        height: 98vh;
+    }
+
+    #pag4 tr,
+    #pag4 td {
+        width: 100%;
+    }
+
+    #pag4 table tr:last-child {
+        position: absolute;
+        top: 10px;
+
+    }
+
+    td.td-informacion {
+        /* width: 500px; */
+        height: 240px;
+        box-sizing: border-box;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    p.informacion-consejos {
+        text-align: left;
+        padding: 10px 40px 0px 30px;
+        font-size: 10px;
+    }
+
+    td.consejos {
+        width: 100%;
+        top: 10px;
+        margin-bottom: 140px;
+        margin-top: 120px;
+        margin-left: 5px;
+        margin-right: 5px;
+        text-align: center;
+    }
+
+    td.consejos:last-child {
+        margin-bottom: 0;
+    }
+
+    div.ovalo {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width: 100px;
+        height: 20px;
+        border-radius: 30px 30px 30px 30px;
+
+        box-shadow: 2px 2px 7px black;
+    }
+
+    div.ovalo.negro {
+        background-color: black;
+    }
+
+    div.ovalo.azul {
+        background-color: #0368AA;
+    }
+
+    div.ovalo.amarillo {
+        background-color: rgb(255, 204, 0);
+    }
+
+    div.ovalo.negro p,
+    div.ovalo.azul p {
+        color: white;
+    }
+
+    div.ovalo.amarillo p {
+        color: black;
+    }
+
+
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        justify-content: left;
+        /* align-items: center; */
+        flex-direction: column;
+        background-color: #0368AA;
+    }
+
+    #segundo-numero {
+        box-sizing: border-box;
+        padding-left: 7.2%;
+    }
+
+
+
+    section.apartados-footer {
+        height: 110px;
+        width: 100%;
+        /* border: 2px solid black; */
+        box-sizing: border-box;
+        padding-left: 20px;
+        margin-top: 10px;
+    }
+
+    section.apartados-footer:first-child {
+        /* width: 550px; */
+        /* border: 2px solid black; */
+    }
+
+    section.apartados-footer:last-child {
+        /* width: 150px; */
+        height: 300px;
+    }
+
+    section.apartados-footer p {
+        color: white;
+        width: 100%;
+    }
+
+    div.contactanos {
+        margin-left: 20px;
+    }
+
+    section.apartados-footer p img {
+        height: 50px;
+    }
 }
 
-html,
-body {
-    min-height: 100vh;
-}
+/* FORMATO ORDENADOR */
+@media (min-width: 769px) {
 
-/* NAVEGADOR */
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    position: fixed;
-    padding: 10px;
-    padding-top: 10px;
-    box-sizing: border-box;
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Futura Book', sans-serif;
+        scroll-behavior: smooth;
+        color: black;
+    }
+
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Futura Book', sans-serif;
+        scroll-behavior: smooth;
+        color: black;
+        box-sizing: border-box;
+    }
+
+    /* NAVEGADOR */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        position: fixed;
+        padding: 10px;
+        padding-top: 10px;
+        box-sizing: border-box;
 
 
-    height: 8.6vh;
-    width: 100%;
-    background-color: white;
+        height: 8.6vh;
+        width: 100%;
+        background-color: white;
 
+        z-index: 999;
+        /* border: 1px solid black; */
+        color: black;
+    }
 
-    /* border: 1px solid black; */
-    color: black;
-}
+    li.menu-container {
+        z-index: 999;
+    }
 
-li.menu-container {
-    z-index: 999;
-}
+    div.logotipo-navegador {
+        width: 156vh;
+        margin: auto;
+    }
 
-div.logotipo-navegador {
-    width: 156vh;
-    margin: auto;
-}
+    #barra-menu,
+    div.logotipo-navegador img {
+        height: 50px;
 
-#barra-menu,
-div.logotipo-navegador img {
-    height: 50px;
+    }
 
-}
-
-/* OPCIONES DEL NAVEGADOR */
-div.menu {
-    visibility: hidden;
-    opacity: 0;
-    /* position:absolute; */
-    position: relative;
-    top: -3px;
-    /* top: 69px;
+    /* OPCIONES DEL NAVEGADOR */
+    div.menu {
+        visibility: hidden;
+        opacity: 0;
+        /* position:absolute; */
+        position: relative;
+        top: -3px;
+        /* top: 69px;
     left: 26px; */
-    padding-left: 26px;
-    /* PARA ENSEÑARLE A KILLIAN QUE TAL ESTA OPCION */
-    max-height: 30px;
-    width: 100%;
+        padding-left: 26px;
+        /* PARA ENSEÑARLE A KILLIAN QUE TAL ESTA OPCION */
+        max-height: 30px;
+        width: 100%;
 
-    background-color: lightblue;
+        transition: all 1s ease-in-out;
+        /* overflow: hidden; */
+    }
 
-    transition: all 1s ease-in-out;
-    /* overflow: hidden; */
-}
+    .menu .opciones {
+        /* flex-direction: column; */
+        flex-direction: row;
+        /* PARA ENSEÑARLE A KILLIAN QUE TAL ESTA OPCION */
+        justify-content: center;
+        /* border: 1px solid black; */
+        /* background-color: #0368AA; */
+        /* border-radius: 0px 10px 10px 10px; */
+        min-width: 160px;
+        height: 30px;
+        /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+        z-index: 1;
+    }
 
-.menu .opciones {
-    /* flex-direction: column; */
-    flex-direction: row;
-    /* PARA ENSEÑARLE A KILLIAN QUE TAL ESTA OPCION */
-    justify-content: center;
-    /* border: 1px solid black; */
-    /* background-color: #0368AA; */
-    /* border-radius: 0px 10px 10px 10px; */
-    min-width: 160px;
-    height: 30px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
-    z-index: 1;
-}
-
-.menu .opciones .opcion {
-    /* padding: 12px 16px; */
-    text-decoration: none;
-    display: block;
-}
+    .menu .opciones .opcion {
+        /* padding: 12px 16px; */
+        text-decoration: none;
+        display: block;
+    }
 
 
-li.opcion {
-    padding: 0;
-    width: 200px;
-    /* max-height: 10px; */
-    height: 20px;
+    li.opcion {
+        padding: 0;
+        width: 200px;
+        /* max-height: 10px; */
+        height: 20px;
 
-    box-shadow: 0px 3px 6px black;
-    margin-left: 10px;
-
-
-    /* border: 0.25px solid black; */
-    background-color: #0368AA;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-}
-
-ul.opciones li:first-child {
-    border-radius: 0px 10px 0px 0px;
-}
-
-ul.opciones li:last-child {
-    border-radius: 0px 0px 10px 10px;
-}
-
-/* HOVER MENU */
-
-nav:hover div.menu {
-    visibility: visible;
-    opacity: 1;
-    top: 0px;
-    /* max-height: 400px; */
-}
-
-.opcion:hover {
-    background-color: #ddd;
-    color: black;
-    box-shadow: inset 2px 2px 7px black;
-}
+        box-shadow: 0px 3px 6px black;
+        margin-left: 10px;
 
 
-li.opcion:hover {
-    /* AZUL --> BLANCO LETRA AZUL
+        /* border: 0.25px solid black; */
+        background-color: #0368AA;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    ul.opciones li:first-child {
+        border-radius: 0px 10px 0px 0px;
+    }
+
+    ul.opciones li:last-child {
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    /* HOVER MENU */
+
+    nav:hover {
+        cursor: pointer;
+    }
+
+    nav:hover div.menu {
+        visibility: visible;
+        opacity: 1;
+        top: 0px;
+        /* max-height: 400px; */
+    }
+
+    .opcion:hover {
+        background-color: #ddd;
+        color: black;
+        box-shadow: inset 2px 2px 7px black;
+    }
+
+
+    li.opcion:hover {
+        /* AZUL --> BLANCO LETRA AZUL
         BLANCO --> NEGRO LETRA BLANCA
         AMARILLO --> NEGRO SOBRE AMARILLO (por confirmar) */
-}
-
-
-/* FORMATO IMAGENES, ENLACES, LISTAS Y CONTENEDOR */
-img {
-    height: auto;
-}
-
-a {
-    display: flex;
-    text-decoration: none;
-}
-
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    list-style: none;
-}
-
-li {
-    justify-content: center;
-    text-align: center;
-    padding-left: 15px;
-    /* margin: 10px; */
-}
-
-/* CONTENEDORES */
-.contenedor {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-
-    margin-bottom: 1px;
-    padding-top: 11vh;
-
-    height: 100vh;
-    background-color: white;
-
-    border-bottom: 2px solid lightgrey;
-
-}
-
-/* PRIMERA PAGINA */
-#video {
-    padding-top: 30px;
-    width: 100%;
-    height: 670px;
-}
-
-/* SEGUNDA PÁGINA */
-#pag2 {
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-
-}
-
-.logo img,
-div.descripcion {
-    margin-top: 10px;
-    /* margin-left: 100px; */
-}
-
-.logo img {
-    margin-left: 10px;
-    height: 600px;
-    /* border: 3px solid black; */
-}
-
-div.descripcion {
-    width: 900px;
-    height: 600px;
-    font-size: 20px;
-    word-spacing: 10px;
-    text-align: left;
-    box-sizing: border-box;
-    word-spacing: 1px;
-    padding: 10px 0px 0px 30px;
-}
-
-div.descripcion p {
-    margin-bottom: 5px;
-    margin-top: 366px;
-    font-size: 19px;
-}
-
-/* TERCERA PAGINA */
-#pag3 {
-    padding-top: 16vh;
-    height: 100vh;
-
-}
-
-#pag3 table:first-child {
-    margin-top: 40px;
-}
-
-table {
-    margin-top: 10px;
-    margin-left: 10px;
-    /* border-spacing: 100px 0px; */
-}
+    }
+
+
+    /* FORMATO IMAGENES, ENLACES, LISTAS Y CONTENEDOR */
+    a {
+        display: flex;
+        text-decoration: none;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        list-style: none;
+    }
+
+    li {
+        justify-content: center;
+        text-align: center;
+        padding-left: 15px;
+        /* margin: 10px; */
+    }
+
+    /* CONTENEDORES */
+    .contenedor {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+
+        margin-bottom: 1px;
+        padding-top: 11vh;
+
+        height: 100vh;
+        background-color: white;
+
+        border-bottom: 2px solid lightgrey;
+
+    }
+
+    /* PRIMERA PAGINA */
+    #video {
+        padding-top: 30px;
+        width: 100%;
+        height: 620px;
+    }
+
+    /* SEGUNDA PÁGINA */
+    #pag2 {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+    }
+
+    .logo img,
+    div.descripcion {
+        margin-top: 10px;
+        /* margin-left: 100px; */
+    }
+
+    .logo img {
+        margin-left: 10px;
+        height: 600px;
+        /* border: 3px solid black; */
+    }
+
+    div.descripcion {
+        width: 900px;
+        height: 600px;
+        font-size: 20px;
+        word-spacing: 10px;
+        text-align: left;
+        box-sizing: border-box;
+        word-spacing: 1px;
+        padding: 10px 0px 0px 30px;
+    }
+
+    div.descripcion p {
+        margin-bottom: 5px;
+        margin-top: 366px;
+        font-size: 19px;
+    }
+
+    /* TERCERA PAGINA */
+    #pag3 {
+        padding-top: 16vh;
+        height: 200vh;
+
+    }
+
+    #pag3 table:first-child {
+        margin-top: 40px;
+    }
+
+    table {
+        margin-top: 10px;
+        margin-left: 10px;
+        /* border-spacing: 100px 0px; */
+    }
+
+    table,
+    td,
+    tr {
+        text-align: center;
+        /* border: 2px solid black; */
+
+    }
+
+    td,
+    tr {
+        border-collapse: collapse;
+    }
+
+    td {
+        width: 500px;
+    }
+
+    td h1 {
+        font-size: 22px;
+    }
+
+    /* PARTE DE LOS FOLLETOS*/
+
+    /* ICONOS */
+    img.iconos {
+        position: absolute;
+        top: -70px;
+        left: 200px;
+        height: 80px;
+    }
+
+    div.visualizacion {
+        display: grid;
+        position: relative;
+    }
+
+    div.folleto {
+        margin: auto;
+        margin-top: 10px;
+        background-color: green;
+        width: calc(350px * 3508 / 4961);
+        /* Mantiene la proporción de A3 */
+        height: calc(370px * 4961 / 3508);
+        box-shadow: 2px 2px 10px black;
+
+        grid-area: 1 / 1 / -1 / -1;
+
+        /* border: 2px solid black; */
+
+
+    }
+
+    div.principal {
+        z-index: 5;
+    }
+
+    div.moviendo-principal-derecha {
+        position: absolute;
+        left: 40%;
+        top: 10%;
+        width: 250px;
+        height: 400px;
+        z-index: 7;
+
+
+        transition: transform 3s ease;
+        transform: translate(-78px, -2.5px) scaleY(1.4);
+    }
+
+    div.moviendo-principal-izquierda {
+        position: absolute;
+        left: 8%;
+        top: 10%;
+        width: 250px;
+        height: 400px;
+        z-index: 7;
+
+
+        transition: transform 3s ease;
+        transform: translate(78px, 2.9px) scaleY(1.15);
+    }
+
+    div.izquierda,
+    div.derecha {
+        position: absolute;
+        left: 50%;
+        width: calc(350px * 3508 / 4961);
+        /* Mantiene la proporción de A3 */
+        height: calc(320px * 4961 / 3508);
+
+        z-index: 1;
+    }
+
+    div.derecha {
+        left: 40%;
+        top: 10%;
+        /* transform: translate(200px, 50px); */
+
+    }
+
+    div.moviendo-derecha {
+        transition: transform 1s ease;
+        transform: translate(101px, 5px) scale(0.805);
+    }
+
+    div.moviendo-izquierda {
+        transition: transform 1s ease;
+        transform: translate(-101px, 5px) scale(0.805);
+    }
+
+    div.izquierda {
+        left: 8%;
+        top: 10%;
+        /* transform: translate(30px, 50px); */
+
+    }
+
+
+    /* HOVER DE LOS FOLLETOS */
+    div.folleto.hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+
+    /* Para que el hover y el click no hagan de las suyas */
+    .disable-hover {
+        pointer-events: none;
+    }
+
+    /* PAGINA CUATRO */
+
+    td.td-informacion {
+        width: 500px;
+        height: 300px;
+        box-sizing: border-box;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    p.informacion-consejos {
+        text-align: left;
+        padding: 10px 40px 0px 30px;
+        font-size: 18px;
+    }
+
+    td.consejos {
+        text-align: center;
+    }
+
+    div.ovalo {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width: 420px;
+        height: 80px;
+        border-radius: 30px 30px 30px 30px;
+
+        box-shadow: 2px 2px 7px black;
+    }
+
+    div.ovalo.negro {
+        background-color: black;
+    }
+
+    div.ovalo.azul {
+        background-color: #0368AA;
+    }
+
+    div.ovalo.amarillo {
+        background-color: rgb(255, 204, 0);
+    }
+
+    div.ovalo.negro p,
+    div.ovalo.azul p {
+        color: white;
+    }
+
+    div.ovalo.amarillo p {
+        color: black;
+    }
+
+
+
+    /* FOOTER */
+    footer {
+        display: flex;
+        justify-content: left;
+        /* align-items: center; */
+        flex-direction: row;
+        height: 45vh;
+        background-color: #0368AA;
+    }
+
+    #segundo-numero {
+        padding-left: 42.5px;
+    }
+
+
+
+    section.apartados-footer {
+        height: 300px;
+        width: 450px;
+        /* border: 2px solid black; */
+        box-sizing: border-box;
+        margin-left: 50px;
+        margin-top: 15px;
+    }
+
+    section.apartados-footer:first-child {
+        width: 550px;
+        /* border: 2px solid black; */
+        box-sizing: border-box;
+        margin-left: 20px;
+    }
+
+    section.apartados-footer:last-child {
+        width: 150px;
+        margin-left: 65px;
+        margin-top: 11px;
+    }
+
+    section.apartados-footer p {
+        margin-top: 10px;
+        color: white;
+    }
+
+    div.contactanos {
+        margin-left: 40px;
+    }
+
+    section.apartados-footer p img {
+        height: 120px;
+    }
 
-table,
-td,
-tr {
-    text-align: center;
-    /* border: 2px solid black; */
-
-}
-
-td,
-tr {
-    border-collapse: collapse;
-}
-
-td {
-    width: 500px;
-}
-
-td h1 {
-    font-size: 22px;
-}
-
-/* PARTE DE LOS FOLLETOS*/
-
-/* ICONOS */
-img.iconos {
-    position: absolute;
-    top: -60px;
-    left: 200px;
-    height: 80px;
-}
-
-div.visualizacion {
-    display: grid;
-    position: relative;
-}
-
-div.folleto {
-    margin: auto;
-    margin-top: 30px;
-    background-color: green;
-    width: 250px;
-    height: 500px;
-    box-shadow: 2px 2px 10px black;
-
-    grid-area: 1 / 1 / -1 / -1;
-
-    /* border: 2px solid black; */
-
-
-}
-
-div.principal {
-    z-index: 5;
-}
-
-div.moviendo-principal-derecha {
-    position: absolute;
-    left: 40%;
-    top: 10%;
-    width: 250px;
-    height: 400px;
-    z-index: 7;
-
-
-    transition: transform 3s ease;
-    transform: translate(-78px, -2.5px) scale(1, 1.24);
-}
-
-div.moviendo-principal-izquierda {
-    position: absolute;
-    left: 8%;
-    top: 10%;
-    width: 250px;
-    height: 400px;
-    z-index: 7;
-
-
-    transition: transform 3s ease;
-    transform: translate(78px, 2.9px) scale(1, 1.24);
-}
-
-div.izquierda,
-div.derecha {
-    position: absolute;
-
-    width: 250px;
-    height: 400px;
-
-    z-index: 1;
-}
-
-div.derecha {
-    left: 40%;
-    top: 10%;
-    /* transform: translate(200px, 50px); */
-
-}
-
-div.moviendo-derecha {
-    transition: transform 1s ease;
-    transform: translate(101px, 5px) scale(0.805);
-}
-
-div.moviendo-izquierda {
-    transition: transform 1s ease;
-    transform: translate(-101px, 5px) scale(0.805);
-}
-
-div.izquierda {
-    left: 8%;
-    top: 10%;
-    /* transform: translate(30px, 50px); */
-
-}
-
-
-/* HOVER DE LOS FOLLETOS */
-div.folleto.hover {
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-/* Para que el hover y el click no hagan de las suyas */
-.disable-hover {
-    pointer-events: none;
-}
-
-/* PAGINA CUATRO */
-
-td.td-informacion {
-    width: 500px;
-    height: 300px;
-    box-sizing: border-box;
-    text-align: left;
-    vertical-align: top;
-}
-
-p.informacion-consejos {
-    text-align: left;
-    padding: 10px 40px 0px 30px;
-    font-size: 18px;
-}
-
-td.consejos {
-    text-align: center;
-}
-
-div.ovalo {
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    width: 420px;
-    height: 80px;
-    border: 2px solid black;
-    border-radius: 30px 30px 30px 30px;
-}
-
-
-
-
-
-/* FOOTER */
-footer {
-    display: flex;
-    justify-content: left;
-    /* align-items: center; */
-    flex-direction: row;
-    height: 45vh;
-    background-color: #0368AA;
-}
-
-#segundo-numero {
-    padding-left: 42.5px;
-}
-
-
-
-section.apartados-footer {
-    height: 300px;
-    width: 450px;
-    /* border: 2px solid black; */
-    box-sizing: border-box;
-    margin-left: 50px;
-    margin-top: 15px;
-}
-
-section.apartados-footer:first-child {
-    width: 550px;
-    /* border: 2px solid black; */
-    box-sizing: border-box;
-    margin-left: 20px;
-}
-
-section.apartados-footer:last-child {
-    width: 150px;
-    margin-left: 65px;
-    margin-top: 11px;
-}
-
-section.apartados-footer p {
-    margin-top: 10px;
-    color: white;
-}
-
-div.contactanos {
-    margin-left: 40px;
-}
-
-section.apartados-footer p img {
-    height: 120px;
 }
