@@ -243,11 +243,45 @@
 
     /* SEGUNDA PÁGINA */
     #pag2 {
+        position: relative;
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
         height: 950px;
 
+
+    }
+
+    img.sol {
+        height: 90px;
+    }
+
+    img.sol-logo {
+        position: absolute;
+        top: 0px;
+        left: 155px;
+    }
+
+    img.sol-gira {
+        animation: rotate 5s linear infinite;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    div.soles {
+        display: none;
+    }
+
+    div.guanches {
+        display: none;
 
     }
 
@@ -260,7 +294,7 @@
         /* margin-left: 100px; */
     }
 
-    .logo img {
+    .logo img:first-child {
         margin: auto;
         height: 400px;
     }
@@ -286,14 +320,6 @@
     #pag3 {
         position: relative;
         height: 1900px;
-    }
-
-    p.informacion-consejos.azul {
-        color: #0368AA;
-    }
-
-    p.informacion-consejos.amarillo {
-        color: #FFCD02;
     }
 
     #pag3 table:first-child {
@@ -374,7 +400,7 @@
         margin: auto;
         margin-top: 10px;
         background-color: green;
-        width: calc(300px * (3508 / 4961));
+        width: calc(350px * (3508 / 4961));
         /* Mantiene la proporción de A3 */
         height: calc(300px * (4961 / 3508));
         box-shadow: 2px 2px 10px black;
@@ -401,29 +427,28 @@
         position: relative;
         left: 20%;
         top: 10%;
-        width: calc(300px * 3508 / 4961);
+        width: calc(350px * (3508 / 4961));
         /* Mantiene la proporción de A3 */
-        height: calc(250px * 4961 / 3508);
+        height: calc(250px * (4961 / 3508));
         z-index: 7;
 
 
-        transition: transform 2s ease;
-        transform: translate(-34%, -3%) scaleY(1.2);
+        transition: transform 1s ease;
+        transform: translate(-30%, -2.5%) scaleY(1.15) scaleX(1.1);
     }
 
     div.moviendo-principal-izquierda {
         position: relative;
-        left: -20%;
+        left: -15%;
         top: 10%;
-        width: calc(300px * 3508 / 4961);
+        width: calc(350px * 3508 / 4961);
         /* Mantiene la proporción de A3 */
         height: calc(250px * 4961 / 3508);
         z-index: 7;
 
-        background-color: yellow;
 
-        transition: transform 2s ease, color 2s ease;
-        transform: translate(38%, -2.5%) scaleY(1.2);
+        transition: transform 1s ease;
+        transform: translate(20%, -2.5%) scaleY(1.2);
     }
 
     div.izquierda,
@@ -445,18 +470,17 @@
     }
 
     div.moviendo-derecha {
-        transition: transform 1s ease;
-        /* background-color: orange; */
+        transition: transform 2s ease;
         transform: translate(39%, 2%) scaleY(0.83);
     }
 
     div.moviendo-izquierda {
-        transition: transform 1s ease;
+        transition: transform 2s ease;
         transform: translate(-44.5%, 2%) scaleY(0.83);
     }
 
     div.izquierda {
-        left: 0%;
+        left: 3%;
         top: 10%;
         /* transform: translate(30px, 50px); */
 
@@ -480,7 +504,13 @@
         position: relative;
         height: 800px;
     }
+    p.informacion-consejos.azul {
+        color: #0368AA;
+    }
 
+    p.informacion-consejos.amarillo {
+        color: #FFCD02;
+    }
     #pag4 tr,
     #pag4 td {
         width: 100%;
@@ -818,19 +848,21 @@
         /* border: 3px solid black; */
     }
 
-    img.sol{
+    img.sol {
         height: 125px;
     }
-    img.sol-logo{
+
+    img.sol-logo {
         position: absolute;
         top: 145px;
         left: 222px;
     }
-    
-    img.sol-guanches{
+
+    img.sol-guanches {
         top: 145px;
         left: 222px;
     }
+
     img.sol-gira {
         animation: rotate 5s linear infinite;
     }
@@ -839,6 +871,7 @@
         from {
             transform: rotate(0deg);
         }
+
         to {
             transform: rotate(360deg);
         }
@@ -856,38 +889,40 @@
         word-spacing: 1px;
         padding: 10px 0px 0px 30px;
     }
-    div.soles{
+
+    div.soles {
         position: absolute;
         top: -10px;
     }
 
-    div.soles img:first-child{
+    div.soles img:first-child {
         margin-left: 75px;
     }
-    div.soles img:last-child{
+
+    div.soles img:last-child {
         margin-right: 0px;
         margin-left: 0px;
     }
 
-    div.soles img{
+    div.soles img {
         margin-right: 168px;
     }
 
-    div.guanches{
+    div.guanches {
         position: relative;
         height: 366px;
         width: 100%;
     }
 
 
-    div.guanches img.img-guanches{
+    div.guanches img.img-guanches {
         position: absolute;
         left: 30px;
         height: 420px;
         top: -29px;
     }
 
-    
+
     div.descripcion p {
         margin-bottom: 5px;
         /* margin-top: 366px; */
