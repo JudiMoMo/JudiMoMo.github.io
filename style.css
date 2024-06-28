@@ -1142,6 +1142,10 @@
         background-color: rgb(255, 204, 0);
     }
 
+    div.ovalo p{
+        font-family: 'Futura Italic', sans-serif;
+    }
+
     div.ovalo.negro p,
     div.ovalo.azul p {
         color: white;
