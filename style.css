@@ -288,6 +288,14 @@
         height: 1900px;
     }
 
+    p.informacion-consejos.azul {
+        color: #0368AA;
+    }
+
+    p.informacion-consejos.amarillo {
+        color: #FFCD02;
+    }
+
     #pag3 table:first-child {
         margin-top: 0;
     }
@@ -322,7 +330,7 @@
 
     td.titulos {
         width: 100%;
-        margin-bottom: 300px;
+        margin-bottom: 325px;
     }
 
 
@@ -366,9 +374,9 @@
         margin: auto;
         margin-top: 10px;
         background-color: green;
-        width: calc(300px * 3508 / 4961);
+        width: calc(300px * (3508 / 4961));
         /* Mantiene la proporción de A3 */
-        height: calc(300px * 4961 / 3508);
+        height: calc(300px * (4961 / 3508));
         box-shadow: 2px 2px 10px black;
 
         grid-area: 1 / 1 / -1 / -1;
@@ -377,6 +385,12 @@
 
 
     }
+
+    div.folleto img {
+        width: 100%;
+        height: 100%;
+    }
+
 
     div.principal {
         z-index: 5;
@@ -780,11 +794,12 @@
     #video {
         padding-top: 30px;
         width: 100%;
-        height: 620px;
+        height: 100%;
     }
 
     /* SEGUNDA PÁGINA */
     #pag2 {
+        position: relative;
         justify-content: center;
         align-items: center;
         flex-direction: row;
@@ -803,7 +818,35 @@
         /* border: 3px solid black; */
     }
 
+    img.sol{
+        height: 125px;
+    }
+    img.sol-logo{
+        position: absolute;
+        top: 145px;
+        left: 222px;
+    }
+    
+    img.sol-guanches{
+        top: 145px;
+        left: 222px;
+    }
+    img.sol-gira {
+        animation: rotate 5s linear infinite;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
     div.descripcion {
+        display: flex;
+        flex-direction: column;
         width: 900px;
         height: 600px;
         font-size: 20px;
@@ -813,22 +856,61 @@
         word-spacing: 1px;
         padding: 10px 0px 0px 30px;
     }
+    div.soles{
+        position: absolute;
+        top: -10px;
+    }
 
+    div.soles img:first-child{
+        margin-left: 75px;
+    }
+    div.soles img:last-child{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    div.soles img{
+        margin-right: 168px;
+    }
+
+    div.guanches{
+        position: relative;
+        height: 366px;
+        width: 100%;
+    }
+
+
+    div.guanches img.img-guanches{
+        position: absolute;
+        left: 30px;
+        height: 420px;
+        top: -29px;
+    }
+
+    
     div.descripcion p {
         margin-bottom: 5px;
-        margin-top: 366px;
+        /* margin-top: 366px; */
         font-size: 19px;
     }
 
     /* TERCERA PAGINA */
     #pag3 {
         padding-top: 16vh;
-        height: 200vh;
+        height: 100vh;
 
     }
 
+    p.informacion-consejos.azul {
+        color: #0368AA;
+    }
+
+    p.informacion-consejos.amarillo {
+        color: #FFCD02;
+    }
+
     #pag3 table:first-child {
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     table {
@@ -841,6 +923,7 @@
     td,
     tr {
         text-align: center;
+
         /* border: 2px solid black; */
 
     }
@@ -861,9 +944,13 @@
     /* PARTE DE LOS FOLLETOS*/
 
     /* ICONOS */
+    div.iconos-div {
+        width: 100%;
+    }
+
     img.iconos {
         position: absolute;
-        top: -70px;
+        top: -80px;
         left: 200px;
         height: 80px;
     }
@@ -877,16 +964,19 @@
         margin: auto;
         margin-top: 10px;
         background-color: green;
-        width: calc(350px * 3508 / 4961);
-        /* Mantiene la proporción de A3 */
-        height: calc(370px * 4961 / 3508);
-        box-shadow: 2px 2px 10px black;
 
+        width: calc(550px * (3508 / 4961));
+        /* Mantiene la proporción de A3 */
+        height: calc(400px * (4961 / 3508));
+        box-shadow: 2px 2px 10px black;
         grid-area: 1 / 1 / -1 / -1;
 
         /* border: 2px solid black; */
+    }
 
-
+    div.folleto img {
+        width: 100%;
+        height: 100%;
     }
 
     div.principal {
@@ -895,43 +985,45 @@
 
     div.moviendo-principal-derecha {
         position: absolute;
-        left: 40%;
+        left: 25%;
         top: 10%;
-        width: 250px;
-        height: 400px;
+        width: calc(500px * (3508 / 4961));
+        /* Mantiene la proporción de A3 */
+        height: calc(350px * (4961 / 3508));
         z-index: 7;
 
 
-        transition: transform 3s ease;
-        transform: translate(-78px, -2.5px) scaleY(1.4);
+        transition: transform 1s ease;
+        transform: translate(-55px, -25px) scaleY(1.15) scaleX(1.1);
     }
 
     div.moviendo-principal-izquierda {
         position: absolute;
-        left: 8%;
+        left: 5%;
         top: 10%;
-        width: 250px;
-        height: 400px;
+        width: calc(500px * (3508 / 4961));
+        /* Mantiene la proporción de A3 */
+        height: calc(350px * (4961 / 3508));
         z-index: 7;
 
 
-        transition: transform 3s ease;
-        transform: translate(78px, 2.9px) scaleY(1.15);
+        transition: transform 1s ease;
+        transform: translate(45px, -25px) scaleY(1.15) scaleX(1.1);
     }
 
     div.izquierda,
     div.derecha {
         position: absolute;
-        left: 50%;
-        width: calc(350px * 3508 / 4961);
+
+        width: calc(550px * (3508 / 4961));
         /* Mantiene la proporción de A3 */
-        height: calc(320px * 4961 / 3508);
+        height: calc(350px * (4961 / 3508));
 
         z-index: 1;
     }
 
     div.derecha {
-        left: 40%;
+        left: 80px;
         top: 10%;
         /* transform: translate(200px, 50px); */
 
@@ -939,16 +1031,16 @@
 
     div.moviendo-derecha {
         transition: transform 1s ease;
-        transform: translate(101px, 5px) scale(0.805);
+        transform: translate(55px, 24px) scale(0.88);
     }
 
     div.moviendo-izquierda {
         transition: transform 1s ease;
-        transform: translate(-101px, 5px) scale(0.805);
+        transform: translate(-55px, 24px) scale(0.88);
     }
 
     div.izquierda {
-        left: 8%;
+        left: 15px;
         top: 10%;
         /* transform: translate(30px, 50px); */
 

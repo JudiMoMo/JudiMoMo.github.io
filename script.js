@@ -11,9 +11,9 @@ for (let folleto of folletos) {
 function hoverAMano(event) {
     if (event.type === 'mouseover') {
         this.classList.add('hover');
-      } else if (event.type === 'mouseout') {
+    } else if (event.type === 'mouseout') {
         this.classList.remove('hover');
-      }
+    }
 }
 
 function cambiarPosicion() {
@@ -21,18 +21,18 @@ function cambiarPosicion() {
     //e intercambiarlos, la transicion ya veremos como hacerla mas adelante
 
     let objetoActual = this;
+    let padre = objetoActual.parentElement; //el id del padre con esto sabemos que principal coger
+
+    let principal = padre.querySelector('.principal');
+    let derecha = padre.querySelector('.derecha');
+    let izquierda = padre.querySelector('.izquierda');
     if (objetoActual.classList.contains('principal')) {
         return;
     } else {
-        let padre = objetoActual.parentElement; //el id del padre con esto sabemos que principal coger
 
-        let principal = padre.querySelector('.principal');
-        let derecha = padre.querySelector('.derecha');
-        let izquierda = padre.querySelector('.izquierda');
-
-        principal.classList.remove('hover');
-        derecha.classList.remove('hover');
-        izquierda.classList.remove('hover');
+        principal.classList.add('disable-hover');
+        derecha.classList.add('disable-hover');
+        izquierda.classList.add('disable-hover');
 
 
         if (objetoActual.classList.contains('derecha')) {
@@ -52,7 +52,11 @@ function cambiarPosicion() {
                 principal.classList.add('derecha');
                 objetoActual.classList.add('principal');
 
-            }, 2000);
+                principal.classList.remove('disable-hover');
+                derecha.classList.remove('disable-hover');
+                izquierda.classList.remove('disable-hover');
+
+            }, 1000);
 
         } else if (objetoActual.classList.contains('izquierda')) {
 
@@ -71,30 +75,12 @@ function cambiarPosicion() {
                 principal.classList.add('izquierda');
                 objetoActual.classList.add('principal');
 
-            }, 2000);
+
+                principal.classList.remove('disable-hover');
+                derecha.classList.remove('disable-hover');
+                izquierda.classList.remove('disable-hover');
+            }, 1000);
         }
-        principal.classList.remove('disable-hover');
-        derecha.classList.remove('disable-hover');
-        izquierda.classList.remove('disable-hover');
+
     }
-
-    // let principal = padre.querySelector('.principal'); //cogemos el principal del bloque que tenemos
-    // principal.classList.remove('principal');
-    // if (objetoActual.classList.contains('derecha')) {
-    //     objetoActual.classList.add('principal');
-    //     objetoActual.classList.remove('derecha');
-
-    //     principal.classList.add('derecha');
-    //     console.log("se mueve");
-
-    // } else if (objetoActual.classList.contains('izquierda')) {
-    //     objetoActual.classList.add('principal');
-    //     objetoActual.classList.remove('izquierda');
-
-    //     principal.classList.add('izquierda');
-    // }
-
-    // principal.classList.remove('principal');
-
-    // }
 }
