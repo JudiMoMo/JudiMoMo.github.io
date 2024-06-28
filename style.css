@@ -434,7 +434,7 @@
 
 
         transition: transform 1s ease;
-        transform: translate(-30%, -2.5%) scaleY(1.15) scaleX(1.1);
+        transform: translate(-30%, -2.5%) scaleY(1.1 5) scaleX(1.1);
     }
 
     div.moviendo-principal-izquierda {
@@ -639,7 +639,7 @@
     * {
         margin: 0;
         padding: 0;
-        font-family: 'Futura Book', sans-serif;
+        /* font-family: 'Futura Book', sans-serif; */
         scroll-behavior: smooth;
         color: black;
     }
@@ -1107,6 +1107,9 @@
         text-align: left;
         padding: 10px 40px 0px 30px;
         font-size: 18px;
+        text-shadow: 1px 1px 1px black;
+        /* font-family: 'Futura Condensed', sans-serif; */
+
     }
 
     td.consejos {
@@ -1114,6 +1117,9 @@
     }
 
     div.ovalo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: auto;
         margin-top: 20px;
         margin-bottom: 10px;
