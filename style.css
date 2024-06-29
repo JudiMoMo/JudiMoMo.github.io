@@ -504,13 +504,7 @@
         position: relative;
         height: 800px;
     }
-    p.informacion-consejos.azul {
-        color: #0368AA;
-    }
-
-    p.informacion-consejos.amarillo {
-        color: #FFCD02;
-    }
+    
     #pag4 tr,
     #pag4 td {
         width: 100%;
@@ -854,13 +848,12 @@
 
     img.sol-logo {
         position: absolute;
-        top: 145px;
-        left: 222px;
+        top: 124px;
+        left: 245px;
     }
 
     img.sol-guanches {
-        top: 145px;
-        left: 222px;
+        top: 124px;
     }
 
     img.sol-gira {
@@ -896,7 +889,7 @@
     }
 
     div.soles img:first-child {
-        margin-left: 75px;
+        margin-left: 45px;
     }
 
     div.soles img:last-child {
@@ -905,7 +898,7 @@
     }
 
     div.soles img {
-        margin-right: 168px;
+        margin-right: 174px;
     }
 
     div.guanches {
@@ -917,8 +910,9 @@
 
     div.guanches img.img-guanches {
         position: absolute;
-        left: 30px;
+        left: 0px;
         height: 420px;
+        width: 95%;
         top: -29px;
     }
 
@@ -934,14 +928,6 @@
         padding-top: 16vh;
         height: 100vh;
 
-    }
-
-    p.informacion-consejos.azul {
-        color: #0368AA;
-    }
-
-    p.informacion-consejos.amarillo {
-        color: #FFCD02;
     }
 
     #pag3 table:first-child {
@@ -1107,7 +1093,6 @@
         text-align: left;
         padding: 10px 40px 0px 30px;
         font-size: 18px;
-        text-shadow: 1px 1px 1px black;
         /* font-family: 'Futura Condensed', sans-serif; */
 
     }
