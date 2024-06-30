@@ -504,7 +504,7 @@
         position: relative;
         height: 800px;
     }
-    
+
     #pag4 tr,
     #pag4 td {
         width: 100%;
@@ -655,7 +655,7 @@
         flex-wrap: wrap;
         position: fixed;
         padding: 10px;
-        padding-top: 10px;
+        padding-top: 9px;
         box-sizing: border-box;
 
 
@@ -672,15 +672,30 @@
         z-index: 999;
     }
 
+    nav ul {
+        width: 100%;
+    }
+
+    li.logotipo-container {
+        width: 100%;
+        padding: 0;
+    }
+
     div.logotipo-navegador {
-        width: 156vh;
+        width: 100%;
         margin: auto;
     }
 
     #barra-menu,
     div.logotipo-navegador img {
         height: 50px;
+    }
 
+    #barra-menu {
+        top: 11px;
+        left: 13px;
+        height: 44px;
+        position: absolute;
     }
 
     /* OPCIONES DEL NAVEGADOR */
@@ -849,7 +864,7 @@
     img.sol-logo {
         position: absolute;
         top: 124px;
-        left: 245px;
+        left: 255px;
     }
 
     img.sol-guanches {
@@ -870,10 +885,14 @@
         }
     }
 
+    #bold{
+        font-family: 'Futura Medium', sans-serif;
+        font-size: 17px;
+    }
     div.descripcion {
         display: flex;
         flex-direction: column;
-        width: 900px;
+        width: 870px;
         height: 600px;
         font-size: 20px;
         word-spacing: 10px;
@@ -898,7 +917,7 @@
     }
 
     div.soles img {
-        margin-right: 174px;
+        margin-right: 160px;
     }
 
     div.guanches {
@@ -918,9 +937,10 @@
 
 
     div.descripcion p {
-        margin-bottom: 5px;
+        margin-bottom: 8px;
         /* margin-top: 366px; */
-        font-size: 19px;
+        line-height: 22.2px;
+        font-size: 17.5px;
     }
 
     /* TERCERA PAGINA */
@@ -1035,7 +1055,7 @@
     div.izquierda,
     div.derecha {
         position: absolute;
-
+        top: 6.5%;
         width: calc(550px * (3508 / 4961));
         /* Mantiene la proporción de A3 */
         height: calc(350px * (4961 / 3508));
@@ -1045,24 +1065,23 @@
 
     div.derecha {
         left: 80px;
-        top: 10%;
         /* transform: translate(200px, 50px); */
 
     }
 
     div.moviendo-derecha {
         transition: transform 1s ease;
-        transform: translate(55px, 24px) scale(0.88);
+        transform: translate(49px, 5px) scale(0.88);
     }
 
     div.moviendo-izquierda {
         transition: transform 1s ease;
-        transform: translate(-55px, 24px) scale(0.88);
+        transform: translate(-49px, 5px) scale(0.88);
     }
 
     div.izquierda {
-        left: 15px;
-        top: 10%;
+        left: 30px;
+
         /* transform: translate(30px, 50px); */
 
     }
@@ -1080,6 +1099,11 @@
     }
 
     /* PAGINA CUATRO */
+
+    #pag4 {
+        padding-top: 9vh;
+
+    }
 
     td.td-informacion {
         width: 500px;
@@ -1108,7 +1132,7 @@
         margin: auto;
         margin-top: 20px;
         margin-bottom: 10px;
-        width: 420px;
+        width: 440px;
         height: 80px;
         border-radius: 30px 30px 30px 30px;
 
@@ -1127,7 +1151,7 @@
         background-color: rgb(255, 204, 0);
     }
 
-    div.ovalo p{
+    div.ovalo p {
         font-family: 'Futura Italic', sans-serif;
     }
 
@@ -1153,34 +1177,38 @@
     }
 
     #segundo-numero {
-        padding-left: 42.5px;
+        position: relative;
+        top: -10px;
+        padding-left: 60px;
     }
 
 
 
     section.apartados-footer {
         height: 300px;
-        width: 450px;
-        /* border: 2px solid black; */
+        width: 470px;
         box-sizing: border-box;
-        margin-left: 50px;
         margin-top: 15px;
+        margin-left: 30px;
+
     }
 
     section.apartados-footer:first-child {
-        width: 550px;
         /* border: 2px solid black; */
         box-sizing: border-box;
         margin-left: 20px;
+        
     }
 
     section.apartados-footer:last-child {
         width: 150px;
-        margin-left: 65px;
+        margin-left: 35px;
         margin-top: 11px;
     }
 
     section.apartados-footer p {
+        padding-left: 25px;
+        padding-right: 5px;
         margin-top: 10px;
         color: white;
     }
@@ -1189,8 +1217,24 @@
         margin-left: 40px;
     }
 
-    section.apartados-footer p img {
-        height: 120px;
+    div.contactanos p {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        height: 20px;
+    }
+
+    div.contactanos p a {
+        color: black;
+    }
+
+    img.marcas {
+        height: 130px;
+    }
+
+    img.redes {
+        margin-right: 5px;
+        height: 30px;
     }
 
 }
