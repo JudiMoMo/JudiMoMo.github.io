@@ -670,6 +670,7 @@
 
     li.menu-container {
         z-index: 999;
+        padding: 0;
     }
 
     nav ul {
@@ -707,7 +708,7 @@
         top: -3px;
         /* top: 69px;
     left: 26px; */
-        padding-left: 26px;
+        /* padding-left: 26px; */
         /* PARA ENSEÑARLE A KILLIAN QUE TAL ESTA OPCION */
         max-height: 30px;
         width: 100%;
