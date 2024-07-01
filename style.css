@@ -706,9 +706,6 @@
         /* position:absolute; */
         position: relative;
         top: -3px;
-        /* top: 69px;
-    left: 26px; */
-        /* padding-left: 26px; */
         /* PARA ENSEÑARLE A KILLIAN QUE TAL ESTA OPCION */
         max-height: 30px;
         width: 100%;
@@ -826,7 +823,7 @@
         height: 100vh;
         background-color: white;
 
-        border-bottom: 2px solid lightgrey;
+        /* border-bottom: 2px solid lightgrey; */
 
     }
 
@@ -865,7 +862,7 @@
     img.sol-logo {
         position: absolute;
         top: 124px;
-        left: 255px;
+        left: 235px;
     }
 
     img.sol-guanches {
@@ -886,7 +883,7 @@
         }
     }
 
-    #bold{
+    .bold{
         font-family: 'Futura Medium', sans-serif;
         font-size: 17px;
     }
@@ -1226,7 +1223,7 @@
     }
 
     div.contactanos p a {
-        color: black;
+        color: white;
     }
 
     img.marcas {
