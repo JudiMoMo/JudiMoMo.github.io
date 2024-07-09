@@ -1172,6 +1172,31 @@
 
     }
 
+    /* CONSEJOS */
+    .hidden {
+        
+    }
+    
+    #imageContainer {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    
+    #largeImage {
+        border: 2px solid black;
+        width: 90%;
+        height: 95%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
 
 
     /* FOOTER */

@@ -84,3 +84,17 @@ function cambiarPosicion() {
 
     }
 }
+
+
+
+function aparecerImagen() {
+    document.getElementById('imageContainer').style.display = 'flex';
+
+}
+
+function desaparecer(){
+    document.getElementById('imageContainer').style.display = 'none';
+
+
+
+}
