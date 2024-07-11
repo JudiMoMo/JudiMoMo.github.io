@@ -1250,7 +1250,7 @@
         /* align-items: center; */
         flex-direction: row;
         height: 45vh;
-        background-color: black;
+        background-color: #0368AA;
     }
 
     #segundo-numero {
