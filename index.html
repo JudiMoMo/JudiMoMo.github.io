@@ -1,80 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulario</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <form class="form-container" novalidate>
         <fieldset novalidate>
-          <legend>Datos Usuario</legend>
-          <label for="username">Nombre de Usuario</label>
-          <input type="text" id="username" placeholder="Introduce tu nombre de usuario" required>
-          <label for="password">Contraseña</label>
-          <input type="password" id="password" placeholder="Introduce Contraseña" required>
-          <div>
-            <input type="checkbox" id="show-password">
-            <label for="show-password">Mostrar Contraseña</label>
-          </div>
+            <legend>Datos Usuario</legend>
+            <label for="username">Nombre de Usuario</label>
+            <input type="text" id="username" name="username" placeholder="Introduce tu nombre de usuario" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Introduce Contraseña" required>
+
+            <div>
+                <input type="checkbox" id="show-password" name="show-password">
+                <label for="show-password">Mostrar Contraseña</label>
+            </div>
         </fieldset>
-      
+
         <fieldset>
-          <legend>Datos Personales</legend>
-          <label for="name">Nombre</label>
-          <input type="text" id="name" placeholder="Nombre" required>
-          <label for="lastname">Apellidos</label>
-          <input type="text" id="lastname" placeholder="Apellidos" required>
-          <label for="phone">Teléfono</label>
-          <input type="tel" id="phone" placeholder="Ejem: (+34)922123123" required>
-          <label for="zipcode">Código Postal</label>
-          <input type="text" id="zipcode" placeholder="38XXX" required>
-          <label for="dni">DNI/NIE</label>
-          <select id="dni">
-            <option value="" disabled selected>--</option>
-            <option value="dni">DNI</option>
-            <option value="nie">NIE</option>
-          </select>
-          <div>
-            <p>Crear cuenta como:</p>
-            <input type="radio" id="particular" name="account_type" value="particular">
-            <label for="particular">Particular</label>
-            <input type="radio" id="empresa" name="account_type" value="empresa">
-            <label for="empresa">Empresa</label>
-          </div>
-          <label for="birth-year">Año de Nacimiento</label>
-          <select id="birth-year">
-            <option value="2010" selected>2010</option>
-            <option value="2009">2009</option>
-            <option value="2008">2008</option>
-          </select>
-          <div>
-            <p>Elige tus aficiones:</p>
-            <input type="checkbox" id="music">
-            <label for="music">Música</label>
-            <input type="checkbox" id="sports">
-            <label for="sports">Deporte</label>
-            <input type="checkbox" id="videogames">
-            <label for="videogames">Video Juegos</label>
-            <input type="checkbox" id="crafts">
-            <label for="crafts">Manualidades</label>
-            <input type="checkbox" id="arts">
-            <label for="arts">Artes</label>
-            <input type="checkbox" id="reading">
-            <label for="reading">Lectura</label>
-          </div>
+            <legend>Datos Personales</legend>
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Nombre" required>
+
+            <label for="lastname">Apellidos</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Apellidos" required>
+
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="Ejem: (+34)922123123" required>
+
+            <label for="zipcode">Código Postal</label>
+            <input type="text" id="zipcode" name="zipcode" placeholder="38XXX" required>
+
+            <label for="dni">DNI/NIE</label>
+            <select id="dni" name="dni" required>
+                <option value="" disabled selected>--</option>
+                <option value="dni">DNI</option>
+                <option value="nie">NIE</option>
+            </select>
+
+            <input type="text" id="dni_w" name="dni_w" placeholder="Ej: 51151543A" required>
+
+            <div>
+                <p>Crear cuenta como:</p>
+                <input type="radio" id="particular" name="account_type" value="particular">
+                <label for="particular">Particular</label>
+                <input type="radio" id="empresa" name="account_type" value="empresa">
+                <label for="empresa">Empresa</label>
+            </div>
+
+            <label for="birth-year">Año de Nacimiento</label>
+            <select id="birth-year" name="birth-year" required>
+                <option value="2011" selected>2011</option>
+            </select>
+
+            <div>
+                <p>Elige tus aficiones:</p>
+                <div class="hobbies">
+                    <div>
+                        <input type="checkbox" id="music" name="hobbies" value="Música">
+                        <label for="music">Música</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="sports" name="hobbies" value="Deporte">
+                        <label for="sports">Deporte</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="videogames" name="hobbies" value="Videojuegos">
+                        <label for="videogames">Videojuegos</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="crafts" name="hobbies" value="Manualidades">
+                        <label for="crafts">Manualidades</label>
+    
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="arts" name="hobbies" value="Artes">
+                        <label for="arts">Artes</label>
+                    </div>
+    
+                    <div>
+                        <input type="checkbox" id="reading" name="hobbies" value="Lectura">
+                        <label for="reading">Lectura</label>
+    
+                    </div>
+                </div>
+                
+            </div>
+
         </fieldset>
-      
+
         <fieldset>
-          <legend>Datos Publicación</legend>
-          <label for="title">Título</label>
-          <input type="text" id="title" maxlength="15" placeholder="Título">
-          <label for="description">Descripción</label>
-          <textarea id="description" maxlength="120" placeholder="Descripción"></textarea>
+            <legend>Datos Publicación</legend>
+            <label for="title">Título</label>
+            <input type="text" id="title" name="title" maxlength="15" placeholder="Título">
+            <span id="count_title" class="count_title">0/15</span>
+            <label for="description">Descripción</label>
+            <textarea id="description" name="description" maxlength="120" placeholder="Descripción"></textarea>
+            <span class="count_description">0/120</span>
         </fieldset>
+
         <button type="submit">Enviar</button>
-        
-      </form>      
+    </form>
+    <script src="script.js"></script>
 </body>
+
 </html>

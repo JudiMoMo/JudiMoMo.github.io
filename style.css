@@ -50,6 +50,10 @@ input:valid {
     border: 2px solid green;
 }
 
+#title:valid{
+    border: 1px solid black;
+}
+
 textarea {
     width: 25em;
     height: 10em;
@@ -59,6 +63,11 @@ textarea {
 
 div {
     margin: 0.5em;
+}
+
+div.hobbies{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 label {
@@ -78,4 +87,11 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.count_title, .count_description{
+    font-size: 0.9em;
+    text-align: right;
+    width: 25em;
+    color: gray;
 }
