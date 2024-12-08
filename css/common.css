@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --font-nav-size: 1rem;
+    --font-main-small-size: 0.5rem;
+
+    --font-button-size: 1rem;
+    --font-button-search-size: 0.8rem;
+    --font-input-size-small: 1rem;
+    --font-input-size: 1.5rem;
+
+    --heigth-comic-big: 30em;
+    --heigth-comic-medium: 24em;
+    --heigth-comic-small: 15em;
+    --heigth-comic-main-product: 25em;
+
+    --height-logo: 3.5em;
+    --height-icon: 1.5em;
+}
+
+.light-theme {
+    --font-color: #fff;
+    --font-dark-color: #18131A;
+    --font-color-footer: #fff;
+    --font-nav-a-color: #fff;
+    --font-color-articles-blue: #fff;
+
+
+    --bg-color: #fff;
+    --header-color: #fff;
+    --nav-color: #3164A4;
+    --main-color: #0077F2;
+
+    --button-bg-color: #18131A;
+    --splide-bar-color: #0077F2;
+
+    --border-color: #18131A;
+    --border-article-color: #fff;
+
+    --shadow-button-color: #fff;
+
+    --category-color: #3164A4;
+
+    --footer-color: #18131A;
+}
+
+/* Tema oscuro */
+.dark-theme {
+    --font-color: #18131A;
+    --font-dark-color: #fff;
+    --font-color-footer: #fff;
+    --font-nav-a-color: #fff;
+    --font-color-articles-blue: #fff;
+
+    --bg-color: #18131A;
+    --header-color: #18131A;
+    --nav-color: #0077F2;
+    --main-color: #3164A4;
+
+    --button-bg-color: #fff;
+    --splide-bar-color: #3164A4;
+    
+    --border-color: #fff;
+    --border-article-color: #fff;
+
+    --shadow-button-color: #18131A;
+
+    --category-color: #0077F2;
+
+    --footer-color: #18131A;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Font_Marble';
+    src: url("../Font/Font_Marble/Fontspring-DEMO-marbledisplay-medium.otf") format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Font_Marble';
+    src: url("../Font/Font_Marble/Fontspring-DEMO-marbledisplay-condensedextrabold.otf") format('otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Font_Marble';
+    src: url("../Font/Font_Marble/Fontspring-DEMO-marbletext-widemediumitalic.otf") format('otf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+
+

@@ -3,12 +3,24 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #f9f9f9;
+}
+
+.container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: stretch;
+    /* Asegura la misma altura */
+    gap: 20px;
+    /* Espaciado entre los elementos */
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
 }
 
 form {
+    flex: 1; /* Ambos elementos ocuparán el mismo ancho */
+    border: 1px solid #999;
+    box-sizing: border-box;
     background-color: #fff;
     padding: 20px;
     border-radius: 4px;
@@ -36,6 +48,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="tel"],
+input[type="number"],
 select {
     width: 25em;
     padding: 0.2em;
@@ -46,11 +59,19 @@ input:invalid {
     border: 2px solid red;
 }
 
+textarea:invalid {
+    border: 2px solid red;
+}
+
 input:valid {
     border: 2px solid green;
 }
 
-#title:valid{
+textarea:valid {
+    border: 2px solid green;
+}
+
+#title:valid {
     border: 1px solid black;
 }
 
@@ -65,7 +86,7 @@ div {
     margin: 0.5em;
 }
 
-div.hobbies{
+div.hobbies {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -89,9 +110,43 @@ button:hover {
     background-color: #0056b3;
 }
 
-.count_title, .count_description{
+.count_title,
+.count_description {
     font-size: 0.9em;
     text-align: right;
     width: 25em;
     color: gray;
+}
+
+
+.error {
+    color: red;
+    font-size: 0.8em;
+    padding: 0.5em;
+    padding-top: 0;
+    font-weight: bold;
+}
+
+
+.text_area_errors {
+    flex: 1; /* Ambos elementos ocuparán el mismo ancho */
+    border: 1px solid #999;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 20px;
+    margin: 0em;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30em;
+}
+
+.text_area_errors h3 {
+    font-size: xx-large;
+    padding-left: 0.1em;
+    margin:0.5em;
+}
+
+.text_area_errors textarea {
+    height: 95%;
+    width: 30em;
 }
